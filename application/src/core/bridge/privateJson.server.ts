@@ -1,5 +1,3 @@
-import { json } from '@remix-run/node';
-
 export function privateJson(data: any, init?: number | ResponseInit) {
     let responseInit =
         typeof init === 'number'
@@ -8,10 +6,10 @@ export function privateJson(data: any, init?: number | ResponseInit) {
               }
             : init;
     let headers = new Headers(responseInit?.headers);
-    return json(data, {
+    return Response.json(data, {
         headers: {
             'Cache-Control': 'private',
+            ...headers,
         },
-        ...headers,
     });
 }

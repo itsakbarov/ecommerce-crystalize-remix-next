@@ -1,4 +1,4 @@
-import { authCookie } from '~/core/cookies.server';
+import { authCookie } from '~/core/cookies.server.js';
 import jwt, { JwtPayload } from 'jsonwebtoken';
 
 export async function authenticate(request: Request): Promise<{ user: any } | undefined> {
@@ -6,7 +6,7 @@ export async function authenticate(request: Request): Promise<{ user: any } | un
         throw new Error('Unauthorized. Error code: ' + code);
     };
     const cookieHeader = request.headers.get('Cookie');
-    const cookie = (await authCookie.parse(cookieHeader)) || {};
+    const cookie = ((await authCookie.parse(cookieHeader)) as Record<string, any> | null) || {};
 
     const token = cookie.jwt;
     if (token === undefined) {
