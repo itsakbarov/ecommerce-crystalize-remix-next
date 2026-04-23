@@ -1,4 +1,4 @@
-import { getJson, postJson } from '@crystallize/reactjs-hooks';
+import { getJson, postJson } from '~/lib/http.js';
 import { Customer } from '../contracts/Customer';
 import { LocalCart } from '../contracts/LocalCart';
 import { sendPaidOrderWithCrystalCard, sendPaidOrderWithCrystalCoin } from './payments/crystal';

@@ -1,4 +1,4 @@
-import { availableLanguages } from '../LanguageAndMarket';
+import { availableLanguages } from '../LanguageAndMarket.js';
 
 type Request = {
     url: string;

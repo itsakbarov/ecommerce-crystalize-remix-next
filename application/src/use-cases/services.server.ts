@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import { Mailer } from './contracts/Mailer';
-import { configureStorage } from './storage.server';
+import { configureStorage } from './storage.server.js';
 
 export const storage = configureStorage(`${process.env?.STORAGE_DSN}`);
 export const memoryStorage = configureStorage('memory://');

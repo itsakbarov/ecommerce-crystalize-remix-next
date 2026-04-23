@@ -1,4 +1,4 @@
-import { postJson } from '@crystallize/reactjs-hooks';
+import { postJson } from '~/lib/http.js';
 import { Customer } from '../../contracts/Customer';
 import { LocalCart } from '../../contracts/LocalCart';
 import { placeCart } from '..';

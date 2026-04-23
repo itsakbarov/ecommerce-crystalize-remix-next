@@ -7,7 +7,7 @@ import {
     TStoreFrontConfig,
     TStoreFront,
 } from '@crystallize/js-storefrontaware-utils';
-import { configureStorage } from './storage.server';
+import { configureStorage } from './storage.server.js';
 import {
     CrystalFakePaymentImplementation,
     PaymentImplementation,
